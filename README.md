@@ -27,7 +27,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [https://github.com/skyrimer/Huddle-landing-page-with-a-single-introductory-section](https://github.com/skyrimer/Huddle-landing-page-with-a-single-introductory-section)
-- Live Site URL: [https://dreamy-kare-ccc815.netlify.app](https://dreamy-kare-ccc815.netlify.app)
+- Live Site URL: [https://elegant-lamport-532f1d.netlify.app](https://elegant-lamport-532f1d.netlify.app)
 
 
 ### Built with
