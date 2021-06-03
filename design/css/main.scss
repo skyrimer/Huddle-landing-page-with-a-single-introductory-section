@@ -1,0 +1,147 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@400;600&display=swap");
+$violet: hsl(257, 40%, 49%);
+$magneta: hsl(300, 69%, 71%);
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  font-size: 16px;
+  font-family: "Open Sans", sans-serif;
+}
+
+.container-wrapper {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+  background: $violet url("/images/bg-mobile.svg") top no-repeat fixed;
+  background-size: contain;
+  @media screen and (min-width: 800px) {
+    background: $violet url("/images/bg-desktop.svg") center no-repeat fixed;
+    background-size: cover;
+  }
+}
+.container {
+  position: relative;
+  width: 90%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 4em;
+  min-height: 100vh;
+  justify-content: space-around;
+  @media screen and (min-width: 800px) {
+    flex-direction: row;
+  }
+  .logo {
+    position: absolute;
+    top: 2em;
+    left: 0;
+    width: 60%;
+    @media screen and (min-width: 400px) {
+      width: auto;
+    }
+  }
+  & > div {
+    flex-basis: 100%;
+    img {
+      width: 100%;
+    }
+  }
+  .img-section {
+    margin-top: 10em;
+    @media screen and (min-width: 800px) {
+      margin-top: 0;
+    }
+  }
+  .text-section {
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @media screen and (min-width: 800px) {
+      align-items: flex-start;
+    }
+    align-items: center;
+    h2 {
+      font-family: "Poppins", sans-serif;
+      font-size: 1.5rem;
+      text-align: center;
+      @media screen and (min-width: 320px) {
+        font-size: calc((100vw - 20rem) / (90 - 20) * (3 - 1.5) + 1.5rem);
+      }
+      @media screen and (min-width: 800px) {
+        text-align: left;
+      }
+      @media screen and (min-width: 1500px) {
+        font-size: 3rem;
+      }
+    }
+    p {
+      font-weight: 400;
+      margin-bottom: 2em;
+      font-size: 1rem;
+      text-align: center;
+      @media screen and (min-width: 320px) {
+        font-size: calc((100vw - 20rem) / (90 - 20) * (1.2 - 1) + 1rem);
+      }
+      @media screen and (min-width: 800px) {
+        text-align: left;
+      }
+      @media screen and (min-width: 1500px) {
+        font-size: 1.2rem;
+      }
+    }
+    button {
+      display: inline-block;
+      padding: 1em 4em;
+      background: white;
+      color: $violet;
+      border: none;
+      outline: none;
+      font-size: 1.2rem;
+      border-radius: 1.5em;
+      transition: all 0.3s ease-in-out;
+      &:hover,
+      &:focus {
+        background: $magneta;
+        color: white;
+        box-shadow: 2px 3px 12px 0 rgba($color: #000000, $alpha: 0.8);
+      }
+    }
+  }
+}
+.social-media {
+  @media screen and (min-width: 800px) {
+    position: fixed;
+    bottom: 2em;
+    right: 5em;
+  }
+  justify-self: flex-start;
+  display: flex;
+  align-self: center;
+  justify-content: space-between;
+  i {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2em;
+    height: 2em;
+    font-size: 1.3rem;
+    margin: 0 1em;
+    border-radius: 50%;
+    border: 1px solid white;
+    color: white;
+    transition: all 0.3s ease-in-out;
+    &:hover,
+    &:focus {
+      background: white;
+      color: $violet;
+    }
+  }
+}
